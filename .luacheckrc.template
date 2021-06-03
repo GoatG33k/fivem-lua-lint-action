@@ -35,6 +35,7 @@ stds.cfx_sv = {
         "GetPlayerIdentifiers",
         "GetPlayers",
         "PerformHttpRequest",
+        "CreateVehicle",
         %%SERVER_GLOBALS%%
     }
 }
