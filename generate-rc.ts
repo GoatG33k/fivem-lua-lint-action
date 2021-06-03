@@ -56,7 +56,7 @@ const reduceNativesToNames = (results: string[], item: CfxNative): string[] => {
     if (a.slice(0, 1) === "_") {
       let aliasName = macroCaseToSnake(a.slice(1))
       if (aliasName === "GetGroundZFor3dCoord") {
-        aliasName = "GetGroundZ_For3dCoord"
+        aliasName = "GetGroundZFor_3dCoord"
       }
       results.push(aliasName)
     }
