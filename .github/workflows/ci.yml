@@ -1,0 +1,20 @@
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Test luacheck Configuration
+    container:
+      image: evandarwin/lua:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Lint tests
+        uses: docker://evandarwin/lua:latest
+        with:
+          args: |
+            /bin/sh -c " \
+            apk add nodejs yarn && \
+            yarn && \
+            node -r ts-node/register ./generate-rc.ts && \
+            luarocks install luacheck && \
+            luacheck --config /github/workspace/.luacheckrc /github/workspace/tests"
