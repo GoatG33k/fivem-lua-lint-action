@@ -53,7 +53,8 @@ stds.cfx_cl = {
 stds.cfx_manifest = {
     read_globals = {
         "author", "description", "repository", "version",
-        "rdr3_warning", "fx_version", "games", 
+        "rdr3_warning", "fx_version", 
+        "games", "game", "authors", "author",
         "server_scripts", "server_script",
         "client_scripts", "client_script",
         "shared_scripts", "shared_script",
