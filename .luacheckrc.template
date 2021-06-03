@@ -75,6 +75,7 @@ files["**/sv_*.lua"].std = "max+cfx+cfx_sv"
 files["**/server/**/*.lua"].std = "max+cfx+cfx_sv"
 -- shared
 files["**/shared.lua"].std="max+cfx+cfx_sv+cfx_cl"
+files["**/shared/**/*.lua"].std="max+cfx+cfx_sv+cfx_cl"
 -- default
 max_line_length = 140
 max_cyclomatic_complexity = 100
