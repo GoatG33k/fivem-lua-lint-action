@@ -1,0 +1,1 @@
+print(GlobalState.a)

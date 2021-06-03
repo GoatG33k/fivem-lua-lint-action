@@ -1,4 +1,3 @@
-GlobalState.a = true
 TriggerClientEvent('', -1)
 TriggerLatentClientEvent('', -1, 1000)
 RegisterServerEvent(function()
@@ -9,4 +8,3 @@ RegisterServerEvent(function()
     print(s)
 end)
 CreateVehicle()
-Wait(0)
