@@ -6,6 +6,7 @@ stds.cfx = {
                 "InvokeNative"
             }
         },
+        exports = { other_fields = true },
         "Wait",
         "CreateThread",
         "SetTimeout",
@@ -58,7 +59,12 @@ stds.cfx_manifest = {
         "server_scripts", "server_script",
         "client_scripts", "client_script",
         "shared_scripts", "shared_script",
-        "ui_page", "files", "file"
+        "ui_page", "files", "file",
+        "export", "exports", "replace_level_meta", 
+        "data_file", "this_is_a_map", "server_only",
+        "loadscreen", "dependency", "dependencies",
+        "provide", "lua54", "disable_lazy_natives",
+        "clr_disable_task_scheduler", "my_data"
     }
 }
 
