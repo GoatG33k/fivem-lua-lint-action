@@ -1,0 +1,27 @@
+-- shared
+CreateThread(function() end)
+Citizen.CreateThread(function() end)
+SetTimeout(0, function() end)
+Citizen.SetTimeout(0, function() end)
+Await(function() end)
+Citizen.Await(function() end)
+Trace()
+Citizen.Trace()
+Citizen.InvokeNative(0x000000)
+-- types
+quat()
+vec()
+vector2()
+vec2()
+vector3()
+vec3()
+vector4()
+vec4()
+-- events
+AddEventHandler('', function() end)
+RegisterNetEvent('', function() end)
+TriggerEvent('')
+RemoveEventHandler(function() end)
+-- json
+json.encode({})
+json.decode('[]')

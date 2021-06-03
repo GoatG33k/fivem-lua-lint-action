@@ -1,0 +1,81 @@
+stds.cfx = {
+    read_globals = {
+        Citizen = {
+            fields = {
+                "Wait", "CreateThread", "SetTimeout", "Await", "Trace",
+                "InvokeNative"
+            }
+        },
+        "Wait",
+        "CreateThread",
+        "SetTimeout",
+        "Await",
+        "Trace",
+        "quat",
+        "vec",
+        "vector2", "vec2",
+        "vector3", "vec3",
+        "vector4", "vec4",
+        "AddEventHandler",
+        "RegisterNetEvent",
+        "TriggerEvent",
+        "RemoveEventHandler",
+        json = { fields = {"encode", "decode"} },
+        %%SHARED_GLOBALS%%
+    }
+}
+
+stds.cfx_sv = {
+    globals = {"GlobalState"},
+    read_globals = {
+        "source",
+        "TriggerClientEvent",
+        "TriggerLatentClientEvent",
+        "RegisterServerEvent",
+        "GetPlayerIdentifiers",
+        "GetPlayers",
+        "PerformHttpRequest",
+        %%SERVER_GLOBALS%%
+    }
+}
+
+stds.cfx_cl = {
+    read_globals = {
+        "TriggerServerEvent",
+        "RegisterNUICallback",
+        "SendNUIMessage",
+        "GlobalState",
+        %%CLIENT_GLOBALS%%
+    }
+}
+
+stds.cfx_manifest = {
+    read_globals = {
+        "author", "description", "repository", "version",
+        "rdr3_warning", "fx_version", "games", 
+        "server_scripts", "server_script",
+        "client_scripts", "client_script",
+        "shared_scripts", "shared_script",
+        "ui_page", "files", "file"
+    }
+}
+
+-- manifest
+files["**/fxmanifest.lua"].std = "max+cfx_manifest"
+files["**/__resource.lua"].std = "max+cfx_manifest"
+-- clients
+files["**/client.lua"].std = "max+cfx+cfx_cl"
+files["**/cl_*.lua"].std = "max+cfx+cfx_cl"
+files["**/client/**/*.lua"].std = "max+cfx+cfx_cl"
+-- server
+files["**/server.lua"].std = "max+cfx+cfx_sv"
+files["**/sv_*.lua"].std = "max+cfx+cfx_sv"
+files["**/server/**/*.lua"].std = "max+cfx+cfx_sv"
+-- shared
+files["**/shared.lua"].std="max+cfx+cfx_sv+cfx_cl"
+-- default
+max_line_length = 140
+max_cyclomatic_complexity = 100
+color = true
+ignore = {'611', '111', '614'}
+std = "max+cfx+cfx_sv+cfx_cl"

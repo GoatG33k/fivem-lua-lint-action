@@ -1,0 +1,18 @@
+# action.yml
+name: "luacheck for FiveM"
+description: "Runs luacheck on a project with FiveM natives"
+inputs:
+  args:
+    description: "luacheck arguments to pass"
+    required: false
+    default: "-d"
+  paths:
+    description: "the path name to lint lua in"
+    required: false
+    default: "."
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.args }}
+    - ${{ inputs.paths }}

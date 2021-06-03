@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "keyofStringsOnly": false,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "useDefineForClassFields": true,
+    "pretty": true
+  }
+}
