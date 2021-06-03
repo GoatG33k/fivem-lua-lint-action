@@ -9,8 +9,5 @@ cd /luacheck-fivem && yarn
 echo "exec => generate natives"
 node -r ts-node/register ./generate-rc.ts && cd $PWD
 
-cd $GITHUB_WORKSPACE
 echo "exec => luacheck $LUACHECK_ARGS $LUACHECK_PATH"
-echo "pwd => $(pwd)"
-luacheck $LUACHECK_ARGS $LUACHECK_PATH
-ls -al .
+cd $GITHUB_WORKSPACE && luacheck $LUACHECK_ARGS $LUACHECK_PATH
