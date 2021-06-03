@@ -27,8 +27,12 @@ type CfxNativesResponse = {
   [group: string]: { [native: string]: CfxNative }
 }
 
+const nativeOverrides: { [name: string]: string | undefined } = {
+  GetGroundZFor3dCoord: "GetGroundZFor_3dCoord"
+}
+
 const macroCaseToSnake = (s: string): string => {
-  return s
+  const name = s
     .split("_")
     .map(str =>
       str
@@ -37,6 +41,7 @@ const macroCaseToSnake = (s: string): string => {
         .join("")
     )
     .join("")
+  return nativeOverrides[name] || name;
 }
 
 const uniqueArray = <T>(a: T[]): T[] => {
