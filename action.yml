@@ -5,14 +5,19 @@ inputs:
   args:
     description: "luacheck arguments to pass"
     required: false
-    default: "-d"
+    default: "-t"
   paths:
     description: "the path name to lint lua in"
     required: false
     default: "."
+  capture:
+    description: "capture output into a file"
+    required: false
+    default: ''
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.args }}
     - ${{ inputs.paths }}
+    - ${{ inputs.capture }}
