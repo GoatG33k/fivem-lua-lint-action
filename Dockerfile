@@ -5,6 +5,8 @@ RUN luarocks install argparse && \
 RUN mkdir -p /luacheck-fivem
 ADD . /luacheck-fivem/
 RUN apk add --no-cache yarn nodejs && \
-  chmod +x /luacheck-fivem/.docker/entrypoint.sh
+    cd /luacheck-fivem/ && yarn && \
+    chmod +x /luacheck-fivem/.docker/entrypoint.sh && \
+    node -r ts-node/register /luacheck-fivem/generate-rc.ts
   
 ENTRYPOINT ["/luacheck-fivem/.docker/entrypoint.sh"]
