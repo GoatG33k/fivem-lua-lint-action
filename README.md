@@ -4,7 +4,7 @@ This GitHub Action runs `luacheck` on your Lua codebase against known FiveM nati
 
 > Note: The FiveM Lua backtick syntax is **NOT** supported, please use `GetHashKey()` instead.
 
---
+---
 
 ## Using
 
@@ -30,10 +30,12 @@ This will automatically run `luacheck` for both commits and pull requests!
 
 ---
 
-## Getting Fancy
+## JUnit Reporting (Getting Fancy)
 
 If you would like to display fancy results in the GitHub action job, you can try the following configuration,
 which outputs a JUnit results file:
+
+![Fancy JUnit Reporting in GitHub Actions Example](.github/docs/fancy_example.png)
 
 > **.github/workflows/lint.yml**
 
