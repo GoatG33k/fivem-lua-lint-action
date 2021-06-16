@@ -4,3 +4,4 @@
 !yarn.lock
 !generate-rc.ts
 !tsconfig.json
+!.luacheckrc.template
