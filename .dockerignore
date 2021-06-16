@@ -1,5 +1,5 @@
-*.iml
-*.idea/
-node_modules/
-.luacheckrc
-Dockerfile
+**/*
+!.docker
+!package.json
+!yarn.lock
+!generate-rc.ts
