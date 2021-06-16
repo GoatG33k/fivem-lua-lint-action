@@ -50,7 +50,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Lint
-        uses: GoatG33k/fivem-lua-lint-action@dev
+        uses: GoatG33k/fivem-lua-lint-action@v1
         with:
           capture: "junit.xml"
           args: "-t --formatter JUnit"
