@@ -13,7 +13,7 @@ inputs:
   capture:
     description: "capture output into a file"
     required: false
-    default: ''
+    default: ""
 runs:
   using: "docker"
   image: "Dockerfile"

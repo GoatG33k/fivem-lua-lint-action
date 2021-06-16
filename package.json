@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "install" : "tsc -b",
+    "install": "tsc -b",
     "build": "node ./generate-rc.js",
     "format": "prettier --write ."
   },
