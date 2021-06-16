@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "strict": true,
+    "target": "ES6",
+    "moduleResolution": "node",
+    "module": "CommonJS",
     "keyofStringsOnly": false,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
@@ -12,7 +15,6 @@
     "noUncheckedIndexedAccess": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true,
-    "useDefineForClassFields": true,
     "pretty": true
   }
 }

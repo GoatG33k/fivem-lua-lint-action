@@ -7,6 +7,6 @@ ADD . /luacheck-fivem/
 RUN apk add --no-cache yarn nodejs && \
     cd /luacheck-fivem/ && yarn && \
     chmod +x /luacheck-fivem/.docker/entrypoint.sh && \
-    node -r ts-node/register /luacheck-fivem/generate-rc.ts
+    yarn build
   
 ENTRYPOINT ["/luacheck-fivem/.docker/entrypoint.sh"]
