@@ -128,6 +128,25 @@ fetchAllNatives().then(natives => {
     .replace("%%SHARED_GLOBALS%%", natives.shared.map(s => `'${s}'`).join(", "))
     .replace("%%SERVER_GLOBALS%%", natives.server.map(s => `'${s}'`).join(", "))
     .replace("%%CLIENT_GLOBALS%%", natives.client.map(s => `'${s}'`).join(", "))
+
+  let extraLibs = ""
+  const extraLibUserArg = process.argv[2]
+  if (extraLibUserArg?.length) {
+    extraLibs = `+${extraLibUserArg}`
+  }
+
+  if (extraLibs.length) {
+    console.log(
+      ansi.gray(
+        `${ansi.yellow(`extra`)} ${ansi.cyan(`=>`)} ${ansi.magentaBright(
+          extraLibs
+        )}`
+      )
+    )
+  }
+
+  template = template.replace(/%%EXTRA%%/g, extraLibs)
+
   fs.writeFileSync(path.join(__dirname, ".luacheckrc"), template)
   console.log(ansi.gray(`=`.repeat(29)))
   console.log(

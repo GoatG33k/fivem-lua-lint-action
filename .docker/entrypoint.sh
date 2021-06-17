@@ -2,6 +2,17 @@
 LUACHECK_ARGS="--config /luacheck-fivem/.luacheckrc $1"
 LUACHECK_PATH="$2"
 LUACHECK_CAPTURE_OUTFILE="$GITHUB_WORKSPACE/$3"
+
+# extra luacheck definitions
+if [[ ! -z "$4" ]]; then
+  OLD_DIR=$(pwd)
+  # regenerate with extras
+  cd /luacheck-fivem/
+  yarn build "$4"
+  # go back
+  cd $OLD_DIR
+fi
+
 EXIT_CODE=0
 
 cd $GITHUB_WORKSPACE 
@@ -23,4 +34,3 @@ echo "exit => $EXIT_CODE"
 if [ $EXIT_CODE -ge 2 ]; then
  exit $EXIT_CODE
 fi
- 
