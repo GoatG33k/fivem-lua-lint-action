@@ -130,7 +130,7 @@ fetchAllNatives().then(natives => {
     .replace("%%CLIENT_GLOBALS%%", natives.client.map(s => `'${s}'`).join(", "))
 
   let extraLibs = ""
-  const extraLibUserArg = process.argv[2]
+  const extraLibUserArg = process.argv[3]
   if (extraLibUserArg?.length) {
     extraLibs = `+${extraLibUserArg}`
   }
