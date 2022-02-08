@@ -72,6 +72,22 @@ stds.cfx_manifest = {
     },
 }
 
+stds.esx_legacy = {
+    read_globals = {
+        MySQL = {
+            fields = {
+                "ready",
+                "insert",
+                "update",
+                "scalar",
+                "single",
+                "prepare",
+                "query",
+            }
+        }
+    }
+}
+
 -- manifest
 files["**/fxmanifest.lua"].std = "max+cfx_manifest"
 files["**/__resource.lua"].std = "max+cfx_manifest"
