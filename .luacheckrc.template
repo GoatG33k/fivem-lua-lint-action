@@ -69,13 +69,6 @@ stds.cfx_manifest = {
     },
 }
 
-stds.esx_reborn = {
-  globals = {
-    "run", "module", "M", "__NAME__", "__GROUP__",
-    "__RESOURCE__", "__DIR__", "_ENV", "__ENV__",
-  }
-}
-
 -- manifest
 files["**/fxmanifest.lua"].std = "max+cfx_manifest"
 files["**/__resource.lua"].std = "max+cfx_manifest"
