@@ -108,5 +108,13 @@ files["**/shared/**/*.lua"].std="max+cfx+cfx_sv+cfx_cl%%EXTRA%%"
 max_line_length = 140
 max_cyclomatic_complexity = 100
 color = true
-ignore = {'611', '111', '614'}
+ignore = {
+    '611',
+    '111',
+    '614',
+    '113',
+    '613',
+    '631',
+
+}
 std = "max+cfx+cfx_sv+cfx_cl%%EXTRA%%"
