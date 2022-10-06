@@ -9,6 +9,7 @@ stds.cfx = {
         exports = { other_fields = true },
         GlobalState = { other_fields = true },
         "Player",
+        "LocalPlayer",
         "Vehicle",
         "Wait",
         "CreateThread",
